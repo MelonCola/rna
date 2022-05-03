@@ -147,7 +147,7 @@ export default function({
                 );
             });
 
-            onTransform({ filter: /\.html$/ }, async (args) => {
+            onTransform({ filter: /\.(html|ejs)$/ }, async (args) => {
                 entryPoints.push(args.path);
 
                 const basePath = path.dirname(args.path);
