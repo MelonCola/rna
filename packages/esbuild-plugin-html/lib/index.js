@@ -170,7 +170,7 @@ export default function({
                 const code = args.code;
                 const relativePath = `./${path.relative(rootDir, basePath)}`;
                 const relativeOutDir = path.resolve(path.resolve(workingDir, outDir), relativePath);
-                const $ = loadHtml(code);
+                const $ = loadHtml(code, { decodeEntities: false, _useHtmlParser2: true });
                 const root = $.root();
                 let count = 0;
 
